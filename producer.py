@@ -24,5 +24,5 @@ example_order = {
 }
 
 value = json.dumps(example_order).encode("utf-8")
-producer.produce(topic="orders", value=value, callback=delivery_report)
+producer.produce(topic="example_topic", value=value, callback=delivery_report)
 producer.flush()  # Safe termination
